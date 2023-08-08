@@ -28,6 +28,6 @@ public class Playercontroller : MonoBehaviour
             transform.position = new Vector3(xrange, transform.position.y, transform.position.z);
         }
         horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.up * horizontalInput * Time.deltaTime * speed);
+        transform.Translate(Vector3.down * horizontalInput * Time.deltaTime * speed);
     }
 }

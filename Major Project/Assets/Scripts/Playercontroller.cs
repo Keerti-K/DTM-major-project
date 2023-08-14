@@ -7,7 +7,10 @@ public class Playercontroller : MonoBehaviour
 {
     public float horizontalInput;
     public float speed = 10.0f;
-    public float xrange = 10.0f;
+    public float xrange = 25.0f;
+    public float cooldownTime = 0.5f;
+
+    private float lastShotTime = 0.0f;
 
     public GameObject projectilePrefab;
 
@@ -34,7 +37,13 @@ public class Playercontroller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            float current_time = Time.time;
+
+            if (current_time - lastShotTime >= cooldownTime)
+            {
+                Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+                lastShotTime = current_time;
+            }
         }
     }
 }

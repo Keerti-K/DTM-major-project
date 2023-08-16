@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 384398818334864613}
   m_Layer: 0
   m_Name: laser
-  m_TagString: Untagged
+  m_TagString: Enemy_spaceships
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,3 +173,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef1aee6c7994e64984b1f39d307453e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GetCollisions : MonoBehaviour
 {
+    public int scoreValue = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,13 @@ public class GetCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        Debug.Log("Collision detected with: " + gameObject.name);
+
+        if (other.gameObject.CompareTag("Enemy_spaceships")) {
+            ScoreManager.Instance.AddScore(scoreValue);
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
+      
     }
 }

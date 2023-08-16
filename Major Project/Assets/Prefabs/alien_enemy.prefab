@@ -1097,7 +1097,7 @@ GameObject:
   - component: {fileID: 382940677459148064}
   m_Layer: 0
   m_Name: alien_enemy
-  m_TagString: Untagged
+  m_TagString: Enemy_spaceships
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1142,7 +1142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dcea2a1a082b2f47b5f5d817057111a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
 --- !u!114 &8201551265752146909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,6 +1188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef1aee6c7994e64984b1f39d307453e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 1
 --- !u!1 &9080075478795818138
 GameObject:
   m_ObjectHideFlags: 0

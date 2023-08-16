@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 1347659235018195472}
   m_Layer: 0
   m_Name: enemy_spaceship2
-  m_TagString: Untagged
+  m_TagString: Enemy_spaceships
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dcea2a1a082b2f47b5f5d817057111a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 4.5
 --- !u!114 &3462484020227126389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,6 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef1aee6c7994e64984b1f39d307453e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 2
 --- !u!1 &8545786802433040623
 GameObject:
   m_ObjectHideFlags: 0

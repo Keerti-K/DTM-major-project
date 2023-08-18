@@ -7,7 +7,8 @@ public class Playercontroller : MonoBehaviour
 {
     public float horizontalInput;
     public float speed = 10.0f;
-    public float xrange = 25.0f;
+    public float rightBoundary = 25.0f;
+    public float leftBoundary = -25.0f;
     public float cooldownTime = 0.5f;
 
     private float lastShotTime = 0.0f;
@@ -23,14 +24,14 @@ public class Playercontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -xrange)
+        if (transform.position.x < leftBoundary)
         {
-            transform.position = new Vector3(-xrange, transform.position.y, transform.position.z);
+            transform.position = new Vector3(leftBoundary, transform.position.y, transform.position.z);
         }
 
-        if (transform.position.x > xrange)
+        if (transform.position.x > rightBoundary)
         {
-            transform.position = new Vector3(xrange, transform.position.y, transform.position.z);
+            transform.position = new Vector3(rightBoundary, transform.position.y, transform.position.z);
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.down * horizontalInput * Time.deltaTime * speed);

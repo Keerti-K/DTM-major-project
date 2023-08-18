@@ -341,10 +341,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8835606312336323936}
-  - component: {fileID: 1795600432511278500}
   - component: {fileID: 3462484020227126389}
   - component: {fileID: 8668138106142264702}
   - component: {fileID: 1347659235018195472}
+  - component: {fileID: -9179445193640437520}
   m_Layer: 0
   m_Name: enemy_spaceship2
   m_TagString: Enemy_spaceships
@@ -372,19 +372,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
---- !u!114 &1795600432511278500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8202657512733880282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dcea2a1a082b2f47b5f5d817057111a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4.5
 --- !u!114 &3462484020227126389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +418,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 2
+--- !u!114 &-9179445193640437520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8202657512733880282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbae89e01b183641b297f497de3e611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &8545786802433040623
 GameObject:
   m_ObjectHideFlags: 0

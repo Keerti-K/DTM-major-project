@@ -20,13 +20,13 @@ public class GetCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision detected with: " + gameObject.name);
 
         if (other.gameObject.CompareTag("Enemy_spaceships")) {
             ScoreManager.Instance.AddScore(scoreValue);
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
-      
+
+
     }
 }

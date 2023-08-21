@@ -40,7 +40,7 @@ public class LiveCounter : MonoBehaviour
             }
             if (lives <= 0)
             {
-                Debug.Log("Game over");
+                FindObjectOfType<GameManagerScript>().endGame();
             }
         }
     }

@@ -7,6 +7,7 @@ public class ScoreCounter : MonoBehaviour
 {
     public static int scoreValue = 0;
     Text score;
+
     
     // Start is called before the first frame update
     void Start()
@@ -18,5 +19,10 @@ public class ScoreCounter : MonoBehaviour
     void Update()
     {
         score.text = "Score : " + scoreValue;
+
+        if (scoreValue >= 50)
+        {
+            Debug.Log("You defeated the aliens");
+        }
     }
 }

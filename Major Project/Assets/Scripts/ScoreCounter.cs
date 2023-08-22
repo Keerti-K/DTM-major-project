@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreCounter : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class ScoreCounter : MonoBehaviour
         if (scoreValue >= 50)
         {
             Debug.Log("You defeated the aliens");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

@@ -24,9 +24,10 @@ public class GameManagerScript : MonoBehaviour
     {
         if (gameHasEnded == false)
         {
-            Debug.Log("Game Over");
+            Debug.Log("Level Restarting");
             gameHasEnded = true;
             Invoke("Restart", delayRestart);
+            
         }
         
     }

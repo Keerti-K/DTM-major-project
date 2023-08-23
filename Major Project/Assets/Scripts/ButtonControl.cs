@@ -35,6 +35,7 @@ public class ButtonControl : MonoBehaviour
     public void menuButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        ScoreCounter.scoreValue = 0;
     }
 
 }

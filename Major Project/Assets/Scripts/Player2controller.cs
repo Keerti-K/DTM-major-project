@@ -28,6 +28,14 @@ public class Player2controller : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        isOnGround = true;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
+        }
+
+        else if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            FindObjectOfType<GameManagerScript>().endGame();
+        }
     }
 }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy_spaceships
+  - Ground
+  - Obstacle
   layers:
   - Default
   - TransparentFX

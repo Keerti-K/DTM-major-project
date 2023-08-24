@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameManagerScript : MonoBehaviour
 {
     bool gameHasEnded = false;
-    public float delayRestart = 1f;
+    public float delayRestart = 0.5f;
 
     // Start is called before the first frame update
     void Start()

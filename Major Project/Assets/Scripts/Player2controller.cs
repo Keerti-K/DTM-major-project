@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player2controller : MonoBehaviour
 {
     private Rigidbody player_rigidbody;
-    public float jumpStrength;
-    public float gravityModifier;
+    public float jumpStrength = 83f;
+    public float gravityModifier = 9f;
     public bool isOnGround = true;
     
     // Start is called before the first frame update

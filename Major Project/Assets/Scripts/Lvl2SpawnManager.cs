@@ -5,8 +5,8 @@ using UnityEngine;
 public class Lvl2SpawnManager : MonoBehaviour
 {
     public GameObject[] obstaclesPrefabs;
-    private float startDelay = 2f;
-    private float repeatRate = 2f;
+    private float startDelay = 1f;
+    private float repeatRate = 4f;
     
     // Start is called before the first frame update
     void Start()

@@ -488,7 +488,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1049144583
@@ -503,8 +503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05abccfa61c54ae4e84e0484d37baf47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpStrength: 60
-  gravityModifier: 5.5
+  jumpStrength: 100
+  gravityModifier: 10
   isOnGround: 1
 --- !u!65 &1049144584
 BoxCollider:
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e5a9191f33c9e41bd6c7dc54905b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayRestart: 0.5
+  delayRestart: 0.2
 --- !u!4 &1361801755
 Transform:
   m_ObjectHideFlags: 0
@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf791c2b68e8bd7478fdefc698a0e3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  speed: 90
   movedirection: {x: 1, y: 0, z: 0}
 --- !u!114 &1481139628
 MonoBehaviour:

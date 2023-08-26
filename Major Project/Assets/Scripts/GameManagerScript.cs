@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class GameManagerScript : MonoBehaviour
 {
     bool gameHasEnded = false;
-    public float delayRestart = 0.5f;
+    public float delayRestart = 0.2f;
+    private float originalGravity;
 
     // Start is called before the first frame update
     void Start()
@@ -36,5 +37,6 @@ public class GameManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         ScoreCounter.scoreValue = 0;
+        Physics.gravity = new Vector3(0, - 9, 0);
     }
 }

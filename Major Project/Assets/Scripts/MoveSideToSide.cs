@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveSideToSide : MonoBehaviour
 {
+    // Speed and bounds
     public float speed = 5f;
     private float sideBound1 = -36f;
     private float sideBound2 = -12f;
@@ -19,10 +20,13 @@ public class MoveSideToSide : MonoBehaviour
 
     void Update()
     {
+        // Moves object left first
         transform.Translate(Vector3.up * Time.deltaTime * speed);
 
+        // When the objects hit the left bound or the right bound
         if (transform.position.x < sideBound1 || transform.position.x > sideBound2)
         {
+            // Moves obstacle down 8 units
             if (!hasAdjustedDownward)
             {
                 speed = -speed;

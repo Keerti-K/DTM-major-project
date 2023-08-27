@@ -7,6 +7,7 @@ TagManager:
   - Enemy_spaceships
   - Ground
   - Obstacle
+  - Gem
   layers:
   - Default
   - TransparentFX

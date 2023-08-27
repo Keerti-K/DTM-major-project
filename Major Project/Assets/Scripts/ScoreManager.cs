@@ -13,18 +13,8 @@ public class ScoreManager : MonoBehaviour
 
     public void AddScore(int amount)
     {
+       // Adds a certain amount onto the score
         ScoreCounter.scoreValue += amount;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

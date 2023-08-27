@@ -5,6 +5,7 @@ using UnityEngine;
 public class Des : MonoBehaviour
 
 {
+    // Setting private bounds
     private float topBound = 40;
     private float lowerBound = -23;
 
@@ -17,6 +18,7 @@ public class Des : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Destroys gameobjects that go out of these set bounds
         if (transform.position.z > topBound)
         {
             Destroy(gameObject);

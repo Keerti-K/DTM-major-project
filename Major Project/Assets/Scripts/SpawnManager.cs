@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject[] animalPrefabs;
+    // Array for spaceship prefabs
+    public GameObject[] spaceshipPrefabs;
+    // Fixed Variables
     private float spawnRangeX = 32;
     private float spawnPosZ = 28;
     private float DelayStart = 2;
@@ -14,7 +16,8 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnAnimalRandom", DelayStart, TimeInterval);
+        // Calls SpawnspaceshipRandom at a certain time with a time gap
+        InvokeRepeating("SpawnspaceshipRandom", DelayStart, TimeInterval);
     }
 
     // Update is called once per frame
@@ -23,10 +26,11 @@ public class SpawnManager : MonoBehaviour
         
     }
 
-    void SpawnAnimalRandom()
+    void SpawnspaceshipRandom()
     {
-        int animalIndex = Random.Range(0, animalPrefabs.Length);
+        //Spawns random enemy spaceships
+        int spaceshipIndex = Random.Range(0, spaceshipPrefabs.Length);
         Vector3 spawnPos = new Vector3(Random.Range(-8, spawnRangeX), 2, spawnPosZ);
-        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+        Instantiate(spaceshipPrefabs[spaceshipIndex], spawnPos, spaceshipPrefabs[spaceshipIndex].transform.rotation);
     }
 }

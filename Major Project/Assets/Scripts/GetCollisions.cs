@@ -4,23 +4,14 @@ using UnityEngine;
 
 public class GetCollisions : MonoBehaviour
 {
+    // You can set different scores for different gameObjects with this variable
     public int scoreValue = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
 
+        // Destroys other gameObjects with this tag and adds their designated score
         if (other.gameObject.CompareTag("Enemy_spaceships")) {
             ScoreManager.Instance.AddScore(scoreValue);
             Destroy(gameObject);

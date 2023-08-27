@@ -19,12 +19,17 @@ public class ScoreCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // This updates the score
         score.text = "Score : " + scoreValue;
 
+        // This checks if the player has scored over 50 points
         if (scoreValue >= 50)
         {
             Debug.Log("You defeated the aliens");
+            // Moves to next level, sets score back to 0, sets gravity for next level.
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            scoreValue = 0;
+            Physics.gravity = new Vector3(0, -9, 0);
         }
     }
 }

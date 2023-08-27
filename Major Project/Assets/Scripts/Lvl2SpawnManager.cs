@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Lvl2SpawnManager : MonoBehaviour
 {
+    // Array for obstacles
     public GameObject[] obstaclesPrefabs;
     private float startDelay = 1f;
     private float repeatRate = 4f;
@@ -11,6 +12,7 @@ public class Lvl2SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Calls SpawnObstacles function at a certain time
         InvokeRepeating("SpawnObstacles", startDelay, repeatRate);
     }
 
@@ -22,6 +24,7 @@ public class Lvl2SpawnManager : MonoBehaviour
 
     void SpawnObstacles()
     {
+        // Spawns random obstacle every time
         int obstacleindex = Random.Range(0, obstaclesPrefabs.Length);
         Vector3 spawnPos = new Vector3(458, 120, -40);
         Instantiate(obstaclesPrefabs[obstacleindex], spawnPos, obstaclesPrefabs[obstacleindex].transform.rotation);

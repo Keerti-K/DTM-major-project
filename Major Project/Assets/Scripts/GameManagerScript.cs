@@ -8,25 +8,15 @@ public class GameManagerScript : MonoBehaviour
 {
     bool gameHasEnded = false;
     public float delayRestart = 0.2f;
-    private float originalGravity;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void endGame()
     {
+        // Checks if the game has ended 
         if (gameHasEnded == false)
         {
             Debug.Log("Level Restarting");
             gameHasEnded = true;
+            // Calls the restart function
             Invoke("Restart", delayRestart);
             
         }
@@ -35,6 +25,7 @@ public class GameManagerScript : MonoBehaviour
 
     void Restart()
     {
+        // Restarts score, scene, and sets gravity again.
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         ScoreCounter.scoreValue = 0;
         Physics.gravity = new Vector3(0, - 9, 0);

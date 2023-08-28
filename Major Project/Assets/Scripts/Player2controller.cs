@@ -9,7 +9,6 @@ public class Player2controller : MonoBehaviour
     public float jumpStrength = 83f;
     public float gravityModifier = 9f;
     public bool isOnGround = true;
-    public int scoreValue = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -44,7 +43,7 @@ public class Player2controller : MonoBehaviour
             FindObjectOfType<GameManagerScript>().endGame();
         }
 
-        else if (collision.gameObject.CompareTag("Gem"))
+        else if (collision.gameObject.CompareTag("HiddenElement"))
         {
             // Updates next scene - Final Scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

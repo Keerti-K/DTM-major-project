@@ -26,7 +26,7 @@ public class SpawnElement : MonoBehaviour
     {
         // Spawns hidden element
         int gemIndex = Random.Range(0, gemPrefabs.Length);
-        Vector3 spawnPos = new Vector3(458, 130, -40);
+        Vector3 spawnPos = new Vector3(458, 150, -40);
         Instantiate(gemPrefabs[gemIndex], spawnPos, gemPrefabs[gemIndex].transform.rotation);
     }
 }

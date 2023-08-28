@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Obstacle
   - Gem
+  - HiddenElement
   layers:
   - Default
   - TransparentFX
